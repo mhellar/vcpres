@@ -1,49 +1,153 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/type.css">
+	<link rel="stylesheet" href="css/particles.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+
+
+				<h1 class="loader">
+					<span>V</span>
+					<span>E</span>
+					<span>R</span>
+					<span>S</span>
+					<span>I</span>
+					<span>O</span>
+					<span>N</span>
+					<br>
+					<span>C</span>
+					<span>O</span>
+					<span>N</span>
+					<span>T</span>
+					<span>R</span>
+					<span>O</span>
+					<span>L</span>
+				</h1>
+
+			</section>
+			<section>
+				<img src="img/viktor.jpg" height="400">
+				<p><small>Jürg Lehni,<br>Viktor, 2006 - 2016</small></p>
+			</section>
+			<section>
+				<img src="img/ruby.png" height="400">
+				<p><small>Lynn Hershman Leeson,<br> Agent Ruby (screenshot), 1999–2002</small></p>
+			</section>
+			<section>
+				<video width="320" height="240" controls>
+					<source src="img/Emigre1.mp4" type="video/mp4">
+				</video>
+				<p><small>Emigre Graphics,<br> Emigre Fonts HyperCard stack, 1990</small></p>
+			</section>
+
+			<section>
+				<ul>
+					<li>All of these works are very different</li>
+					<li class="fragment">They were all built using computer code</li>
+					<li class="fragment">Code is instructions written by a person that tells the computer what to do</li>
+					<li class="fragment">It is like a blueprint</li>
+					<li class="fragment">Preserving, Caring and maintaining this code is essential to the life of the artwork</li>
+				</ul>
+			</section>
+
+			<section>
+				<img src="img/pymeta.png">
+			</section>
+
+			<section>
+				<img src="img/physvault.jpg" height="250">
+				<img class="fragment" src="img/digvault.jpg" height="250">
+				<p class="fragment"><small>In addition to a physical vault there is also a digital art vault</small></p>
+			</section>
+
+			<section>
+				<img src="img/git.png" height="200">
+				<p><small>Git (/ɡɪt/) is a version-control system for tracking changes in computer files and coordinating work on
+						those files among multiple people. It is primarily used for source-code management in software development, but
+						it can be used to keep track of changes in any set of files.</small></p>
+			</section>
+			<section>
+				<img src="img/source.png">
+				<p><small>In addition to a Git we use a product call Bitbucket server which helps organize the
+						source
+						code and offers a clear user interface. Here we can review the source code</small></p>
+			</section>
+			<section>
+				<img src="img/branches.png">
+				<p><small>We can make branches or copies of the original source code when updates are required for
+						conservation purposes. This allows us to safely test updates with out comprimising the original work</small></p>
+			</section>
+			<section>
+				<img src="img/commits.png">
+				<p><small>All changes are tracked with information on who made the change, a timestamp, descriptive comment and
+						clear view of what was changed</small></p>
+			</section>
+			<section>
+				<img src="img/history.png">
+				<p><small>Like provenance, there is an extensive record of of the history of the work. It is possible to revert
+						back to any point in time.</small></p>
+			</section>
+			<section>
+				<h1>Thank You!</h1>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script src="js/particles.js"></script>
+	<script src="js/particles_a.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>
