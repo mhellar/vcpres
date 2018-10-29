@@ -29,7 +29,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h3>Software Preservation</h3>
+				<h3>Preserving Source Code</h3>
 			</section>
 			<section>
 				<img src="img/viktor.jpg" height="400">
@@ -90,8 +90,16 @@
 			</section>
 			<section>
 				<img src="img/history.png">
-				<p><small>Like provenance, there is an extensive record of of the history of the work. It is possible to revert
+				<p><small>Like provenance, there is an extensive record of the history on the work. It is possible to revert
 						back to any point in time.</small></p>
+			</section>
+			<section>
+				<ul>
+					<li>Reasons Code needs to be updated</li>
+					<li class="fragment">Web based artworks have to be viewed in modern web-browsers</li>
+					<li class="fragment">Languages get updated and older features get retired</li>
+					<li class="fragment">The original hardware has failed and the code needs to run on a modern computer</li>
+				</ul>
 			</section>
 			<section>
 				<ul>
@@ -119,23 +127,24 @@
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
 			dependencies: [{
-					src: 'plugin/markdown/marked.js'
-				},
-				{
-					src: 'plugin/markdown/markdown.js'
-				},
-				{
-					src: 'plugin/notes/notes.js',
-					async: true
-				},
-				{
-					src: 'plugin/highlight/highlight.js',
-					async: true,
-					callback: function () {
-						hljs.initHighlightingOnLoad();
-					}
+				src: 'plugin/markdown/marked.js'
+			},
+			{
+				src: 'plugin/markdown/markdown.js'
+			},
+			{
+				src: 'plugin/notes/notes.js',
+				async: true
+			},
+			{
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function () {
+					hljs.initHighlightingOnLoad();
 				}
+			}
 			]
 		});
 	</script>
