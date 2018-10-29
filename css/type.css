@@ -1,99 +1,123 @@
-html {
-    background: #CCD0D4;
-    min-height: 100%;
-}
+@-webkit-keyframes mask-move {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-body {
-    min-height: 100%;
-}
-
-h1.loader {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Nunito', sans-serif;
-    font-size: 2 em;
-    color: transparent;
-    letter-spacing: 0.01em;
-}
-
-.loader span {
-    text-shadow:
-        0 0 2px rgba(204, 208, 212, 0.9),
-        0 15px 25px rgba(0, 0, 0, 0.3),
-        0 -2px 3px rgba(0, 0, 0, 0.1),
-        0 -5px 10px rgba(255, 255, 255, 0.5),
-        0 5px 10px rgba(0, 0, 0, 0.3),
-        0 3px 4px rgba(255, 255, 255, 0.2),
-        0 0 20px rgba(255, 255, 255, 0.45);
-
-    animation: loading 0.85s ease-in-out infinite alternate;
-}
-
-@keyframes loading {
-    to {
-        text-shadow:
-            0 0 2px rgba(204, 208, 212, 0.2),
-            0 0 3px rgba(0, 0, 0, 0.02),
-            0 0 0 rgba(0, 0, 0, 0),
-            0 0 0 rgba(255, 255, 255, 0),
-            0 0 0 rgba(0, 0, 0, 0),
-            0 0 0 rgba(255, 255, 255, 0),
-            0 0 0 rgba(255, 255, 255, 0);
+    100% {
+        -webkit-transform: translateX(129px);
+        transform: translateX(129px);
     }
 }
 
-.loader span:nth-child(2) {
-    animation-delay: 0.15s;
+@keyframes mask-move {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(129px);
+        transform: translateX(129px);
+    }
 }
 
-.loader span:nth-child(3) {
-    animation-delay: 0.30s;
+@-webkit-keyframes mask-inner-move {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-129px);
+        transform: translateX(-129px);
+    }
 }
 
-.loader span:nth-child(4) {
-    animation-delay: 0.45s;
+@keyframes mask-inner-move {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-129px);
+        transform: translateX(-129px);
+    }
 }
 
-.loader span:nth-child(5) {
-    animation-delay: 0.60s;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-.loader span:nth-child(6) {
-    animation-delay: 0.75s;
+
+.focus {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .2rem;
+    line-height: 1;
+    position: relative;
+    width: 179px;
 }
 
-.loader span:nth-child(7) {
-    animation-delay: 0.90s;
+.focus:before {
+    content: 'Focus';
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
 }
 
-.loader span:nth-child(8) {
-    animation-delay: 1.05s;
+.focus:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: calc(100% + 8px);
+    top: -4px;
+    left: 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    -webkit-animation: mask-move 1s linear infinite alternate;
+    animation: mask-move 1s linear infinite alternate;
 }
 
-.loader span:nth-child(9) {
-    animation-delay: 1.20s;
+.focus--mask {
+    overflow: hidden;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #89cb66;
+    -webkit-animation: mask-move 1s linear infinite alternate;
+    animation: mask-move 1s linear infinite alternate;
 }
 
-.loader span:nth-child(10) {
-    animation-delay: 1.35s;
+.focus--mask-inner {
+    -webkit-animation: mask-inner-move 1s linear infinite alternate;
+    animation: mask-inner-move 1s linear infinite alternate;
 }
 
-.loader span:nth-child(11) {
-    animation-delay: 1.50s;
+.credits {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    font-style: italic;
+    text-align: center;
 }
 
-.loader span:nth-child(12) {
-    animation-delay: 1.65s;
+.credits a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
 }
 
-.loader span:nth-child(13) {
-    animation-delay: 1.80s;
-}
-
-.loader span:nth-child(14) {
-    animation-delay: 1.95s;
-}
-
-.loader span:nth-child(15) {
-    animation-delay: 2.10s;
+.credits a:hover {
+    text-decoration: underline;
 }
